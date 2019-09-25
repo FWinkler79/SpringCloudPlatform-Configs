@@ -25,11 +25,20 @@ management:
     refresh.enabled: true        # enable /actuator/refresh endpoint.
     health.show-details: always
 
-eureka:
-  client:
-    registryFetchIntervalSeconds: 2 # only for local development.
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    leaseRenewalIntervalInSeconds: 2 # only for local development.
-    healthcheck.enabled: true
+# Eureka Client Configurations:
+# 
+# Should be managed in each client application / service separately.
+# This is because the config-server itself should be found via the 
+# service registry. Therefore, configurations can only be fetched
+# once a client has connected to Eureka and looked up the config-server.
+# Hence, every client needs to know where to find Eureka BEFORE it 
+# can get any configurations from the config-server.
+#
+# eureka:
+#   client:
+#     registryFetchIntervalSeconds: 2 # only for local development.
+#     serviceUrl:
+#       defaultZone: http://localhost:8761/eureka
+#   instance:
+#     leaseRenewalIntervalInSeconds: 2 # only for local development.
+#     healthcheck.enabled: true
