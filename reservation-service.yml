@@ -3,5 +3,10 @@ logging:
   level: 
     com.netflix: DEBUG # Overriding centrally managed log levels for this particular service..
 
+# Actuator Endpoint Configurations
+info: # /actuator/info
+  app:
+    description: "A service to place and review reservations."
+
 com.equalities:
   greeting: "Hello SAP World!"
