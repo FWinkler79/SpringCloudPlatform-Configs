@@ -36,9 +36,10 @@ management:
 # can get any configurations from the config-server.
 eureka:
   client:
-    registryFetchIntervalSeconds: 2 # only for local development.
+    registryFetchIntervalSeconds: 2 # Only for local development.
+    healthcheck.enabled: true       # Enable clients to send their health status to Eureka with every Eureka heartbeat.
   instance:
-    leaseRenewalIntervalInSeconds: 2 # only for local development.
+    leaseRenewalIntervalInSeconds: 2 # Only for local development.
 
 spring:
   cloud:
