@@ -1,7 +1,7 @@
 # Logging Levels:
 logging:
   level: 
-    com.netflix: ERROR # Overriding centrally managed log levels for this particular service..
+    com.netflix: DEBUG # Overriding centrally managed log levels for this particular service..
 
 com.equalities:
   greeting: "Hello SAP World!"
