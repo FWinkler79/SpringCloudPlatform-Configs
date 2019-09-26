@@ -9,4 +9,4 @@
 #  port: ${PORT:2222}
 
 com.equalities:
-  greeting: "Hello World!"
+  greeting: "Hello LOCAL World!"
