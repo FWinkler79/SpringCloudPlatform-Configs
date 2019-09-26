@@ -42,6 +42,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 2 # Only for local development.
 
 spring:
+  
   cloud:
     # Tracing configuations:
     # Sampler probability should be between 0.0 and 1.0. 
@@ -50,6 +51,16 @@ spring:
     sleuth:
       sampler:
         probability: 1.0
+
+  # Rabbit MQ binder configurations. These will be required for all
+  # applications that are part of the Spring Cloud Bus and need to 
+  # receive configuration updates. Note: these will also be used by the
+  # config-server itself!
+  rabbitmq:
+    host: localhost # TODO: properly handle for Cloud deployment.
+    port: 5672
+    username: guest # TODO: outsource to a vault.
+    password: guest # TODO: outsource to a vault.
 
 # Actuator Endpoint Configurations
 info: # /actuator/info
