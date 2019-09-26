@@ -35,6 +35,6 @@ management:
 # can get any configurations from the config-server.
 eureka:
   client:
-    registryFetchIntervalSeconds: 2 # only for local development.
+    registryFetchIntervalSeconds: 30 # only for local development.
   instance:
-    leaseRenewalIntervalInSeconds: 2 # only for local development.
+    leaseRenewalIntervalInSeconds: 30 # only for local development.
