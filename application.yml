@@ -15,7 +15,8 @@ debug: true
 # Logging Levels:
 logging:
   level: 
-    com.equalitites: DEBUG
+    com.equalitites: DEBUG # Make sure we see all our own logs.
+    com.netflix: OFF       # Turn off logs about Eureka not being present. Once Eureka is up, services will find it.
 
 # Management Endpoints
 management:
@@ -38,3 +39,13 @@ eureka:
     registryFetchIntervalSeconds: 2 # only for local development.
   instance:
     leaseRenewalIntervalInSeconds: 2 # only for local development.
+
+spring:
+  cloud:
+    # Tracing configuations:
+    # Sampler probability should be between 0.0 and 1.0. 
+    # 0.1 is the default, meaning that 10% of requests are 
+    # actually traced. The rest is not for performance reasons.
+    sleuth:
+      sampler:
+        probability: 1.0
