@@ -54,5 +54,5 @@ spring:
 # Actuator Endpoint Configurations
 info: # /actuator/info
   app:
-    name: \${spring.application.name:application}
+    name: ${spring.application.name:application}
     #description: "Should be specified by respective application."
