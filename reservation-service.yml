@@ -9,4 +9,4 @@ info: # /actuator/info
     description: "A service to place and review reservations."
 
 com.equalities:
-  greeting: "Hello SAP World!"
+  greeting: "Hello Florian World!"
