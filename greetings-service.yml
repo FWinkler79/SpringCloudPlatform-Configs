@@ -9,4 +9,4 @@ info: # /actuator/info
     description: "A service to show a greeting coming from configs. Shows also how config changes can be propagated to services using Spring Cloud Bus."
 
 com.equalities:
-  greeting: "Hello SAP World!"
+  greeting: "Hello Spring World!"
