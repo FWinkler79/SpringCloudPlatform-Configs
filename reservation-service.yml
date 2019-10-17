@@ -1,7 +1,7 @@
 # Logging Levels:
 logging:
   level: 
-    com.netflix: DEBUG # Overriding centrally managed log levels for this particular service..
+    com.netflix: INFO # Overriding centrally managed log levels for this particular service..
 
 # Actuator Endpoint Configurations
 info: # /actuator/info
@@ -9,4 +9,4 @@ info: # /actuator/info
     description: "A service to place and review reservations."
 
 com.equalities:
-  greeting: "Hello Joerg!"
+  greeting: "Hello Spring World!"
