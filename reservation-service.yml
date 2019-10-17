@@ -7,6 +7,3 @@ logging:
 info: # /actuator/info
   app:
     description: "A service to place and review reservations."
-
-com.equalities:
-  greeting: "Hello Spring World!"

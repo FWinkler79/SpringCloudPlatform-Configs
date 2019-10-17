@@ -1,0 +1,12 @@
+# Logging Levels:
+logging:
+  level: 
+    com.netflix: INFO # Overriding centrally managed log levels for this particular service..
+
+# Actuator Endpoint Configurations
+info: # /actuator/info
+  app:
+    description: "A service to show a greeting coming from configs. Shows also how config changes can be propagated to services using Spring Cloud Bus."
+
+com.equalities:
+  greeting: "Hello Spring World!"

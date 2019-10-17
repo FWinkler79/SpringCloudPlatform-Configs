@@ -1,0 +1,3 @@
+# Show a different greeting when running in the Cloud.
+com.equalities:
+  greeting: "Hello CLOUD World!"
