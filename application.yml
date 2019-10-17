@@ -9,9 +9,6 @@
 # 
 # ... in their manifest.yml
 
-# Enable Debug Mode
-debug: true
-
 # Logging Levels:
 logging:
   level: 
