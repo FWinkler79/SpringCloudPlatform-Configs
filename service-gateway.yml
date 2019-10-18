@@ -1,0 +1,5 @@
+
+# Actuator Endpoint Configurations
+info: # /actuator/info
+  app:
+    description: "A gateway that acts as the entrance point to the micro-services landscape."
