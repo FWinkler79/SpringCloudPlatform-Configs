@@ -14,7 +14,7 @@ spring:
       rsocket:
         enabled: true                       # default is true
         id: gateway                         # default is gateway
-        route-id: gateway-instance-1-route
+        route-id: 1                         # Needs to be an integer :[
         service-name: gateway               # default is gateway
         micrometer-tags:                    # for metering support
           - component                       # default is component
