@@ -3,3 +3,23 @@
 info: # /actuator/info
   app:
     description: "A gateway that acts as the entrance point to the micro-services landscape."
+
+spring:
+  rsocket:
+    server:
+      port: ${rsocket.server.port:7002}
+
+  cloud:
+    gateway:
+      rsocket:
+        enabled: true                       # default is true
+        id: gateway                         # default is gateway
+        route-id: gateway-instance-1-route
+        service-name: gateway               # default is gateway
+        micrometer-tags:                    # for metering support
+          - component                       # default is component
+          - gateway                         # default is gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway.rsocket: DEBUG
