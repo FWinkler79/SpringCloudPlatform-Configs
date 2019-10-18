@@ -1,0 +1,5 @@
+
+# Actuator Endpoint Configurations
+info: # /actuator/info
+  app:
+    description: "A service that acts as a client to reservation-service."
