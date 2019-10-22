@@ -13,10 +13,10 @@ spring:
     gateway:
       rsocket:
         client:
-          service-name: reservation-service
-          route-id: 400
+          service_name: reservation-service
+          route_id: 400
           tags: # additional service metadata (similar to Eureka metadata tags)
-            instance-name: reservation-service-1
+            instance_name: reservation-service-1
             version: 1.0
             canary: false
           broker: # where to find the gateway RSocket broker
