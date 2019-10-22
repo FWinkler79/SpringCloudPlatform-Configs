@@ -13,13 +13,12 @@ spring:
           route-id: 500
           tags: # additional service metadata (similar to Eureka metadata tags)
             instance_name: reservation-service-client-1
-            version: 1.0
-            canary: false
+            version: 1.0-RELEASE # version indicates that this is a release version instance.
           broker: # where to find the gateway RSocket broker
             host: localhost # TODO: inject from environment for Cloud deployments.
             port: 7002      # TODO: connect via websocket, not TCP.
           forwarding:       # Routing / forwarding hints to the Gateway broker.
-            create.reservation.{version}:         # for routes pointed at "create.reservation.{version}" ...
+            create.reservation:                   # for routes pointed at "create.reservation" ...
               service_name: reservation-service   # ... route the request to an instance of "reservation-service" ...
-              canary: false                       # ... whose "canary" flag is false and ....
-              version: {version}                  # ... whose "version" is the one specified in the route.
+              version: 1.0-RELEASE                # ... whose "version" is 1.0. Note, that this can be used for 
+                                                  # canary routing, if changed to 1.0-CANARY!

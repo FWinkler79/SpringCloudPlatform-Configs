@@ -6,7 +6,7 @@ logging:
 # Actuator Endpoint Configurations
 info: # /actuator/info
   app:
-    description: "A service to place and review reservations."
+    description: "A CANARY version of the service to place and review reservations."
 
 spring:
   cloud:
@@ -14,10 +14,10 @@ spring:
       rsocket:
         client:
           service-name: reservation-service
-          route-id: 400
+          route-id: 401
           tags: # additional service metadata (similar to Eureka metadata tags)
-            instance_name: reservation-service-1
-            version: 1.0-RELEASE # version indicates that this is a release version instance (not a canary one).
+            instance_name: reservation-service-2-canary
+            version: 2.0-CANARY # version indicates that this is a canary instance
           broker: # where to find the gateway RSocket broker
             host: localhost # TODO: inject from environment for Cloud deployments.
             port: 7002      # TODO: connect via websocket, not TCP.
